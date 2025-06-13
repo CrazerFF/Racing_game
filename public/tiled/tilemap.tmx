@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="28" height="18" tilewidth="64" tileheight="64" infinite="0" nextlayerid="11" nextobjectid="469">
+ <tileset firstgid="1" name="tileset" tilewidth="64" tileheight="64" spacing="1" tilecount="465" columns="31">
+  <image source="tileset.png" width="2048" height="1024"/>
+  <tile id="219">
+   <properties>
+    <property name="1" value="1"/>
+   </properties>
+  </tile>
+  <tile id="250">
+   <properties>
+    <property name="1" value="1"/>
+   </properties>
+  </tile>
+  <tile id="281">
+   <properties>
+    <property name="1" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="466" name="objects" tilewidth="448" tileheight="256" tilecount="32" columns="0">
+  <grid orientation="orthogonal" width="224" height="128"/>
+  <tile id="0">
+   <image width="83" height="50" source="objects/arrow.png"/>
+  </tile>
+  <tile id="1">
+   <image width="28" height="28" source="objects/barrel_blue.png"/>
+  </tile>
+  <tile id="2">
+   <image width="35" height="24" source="objects/barrel_blue_down.png"/>
+  </tile>
+  <tile id="3">
+   <image width="28" height="28" source="objects/barrel_red.png"/>
+  </tile>
+  <tile id="4">
+   <image width="35" height="24" source="objects/barrel_red_down.png"/>
+  </tile>
+  <tile id="5">
+   <image width="105" height="31" source="objects/barrier_red.png"/>
+  </tile>
+  <tile id="6">
+   <image width="105" height="31" source="objects/barrier_red_race.png"/>
+  </tile>
+  <tile id="7">
+   <image width="105" height="31" source="objects/barrier_white.png"/>
+  </tile>
+  <tile id="8">
+   <image width="105" height="31" source="objects/barrier_white_race.png"/>
+  </tile>
+  <tile id="9">
+   <image width="40" height="62" source="objects/car_blue_1.png"/>
+  </tile>
+  <tile id="10">
+   <image width="40" height="62" source="objects/car_red_1.png"/>
+  </tile>
+  <tile id="11">
+   <image width="83" height="50" source="objects/checkpoint.png"/>
+  </tile>
+  <tile id="12">
+   <image width="23" height="22" source="objects/cone_down.png"/>
+  </tile>
+  <tile id="13">
+   <image width="23" height="22" source="objects/cone_straight.png"/>
+  </tile>
+  <tile id="14">
+   <image width="55" height="48" source="objects/oil.png"/>
+  </tile>
+  <tile id="15">
+   <image width="45" height="36" source="objects/rock1.png"/>
+  </tile>
+  <tile id="16">
+   <image width="37" height="34" source="objects/rock2.png"/>
+  </tile>
+  <tile id="17">
+   <image width="44" height="34" source="objects/rock3.png"/>
+  </tile>
+  <tile id="18">
+   <image width="64" height="64" source="objects/tent_blue.png"/>
+  </tile>
+  <tile id="19">
+   <image width="128" height="128" source="objects/tent_blue_large.png"/>
+  </tile>
+  <tile id="20">
+   <image width="64" height="64" source="objects/tent_red.png"/>
+  </tile>
+  <tile id="21">
+   <image width="128" height="128" source="objects/tent_red_large.png"/>
+  </tile>
+  <tile id="22">
+   <image width="28" height="28" source="objects/tires_red.png"/>
+  </tile>
+  <tile id="23">
+   <image width="28" height="28" source="objects/tires_red_alt.png"/>
+  </tile>
+  <tile id="24">
+   <image width="28" height="28" source="objects/tires_white.png"/>
+  </tile>
+  <tile id="25">
+   <image width="28" height="28" source="objects/tires_white_alt.png"/>
+  </tile>
+  <tile id="26">
+   <image width="107" height="106" source="objects/tree_large.png"/>
+  </tile>
+  <tile id="27">
+   <image width="71" height="71" source="objects/tree_small.png"/>
+  </tile>
+  <tile id="28">
+   <image width="224" height="112" source="objects/tribune_empty.png"/>
+  </tile>
+  <tile id="29">
+   <image width="224" height="112" source="objects/tribune_full.png"/>
+  </tile>
+  <tile id="30">
+   <image width="224" height="72" source="objects/tribune_overhang_red.png"/>
+  </tile>
+  <tile id="31">
+   <image width="224" height="72" source="objects/tribune_overhang_striped.png"/>
+  </tile>
+ </tileset>
+ <layer id="1" name="grass" width="28" height="18">
+  <data encoding="csv">
+70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,
+70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,
+70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,
+70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,
+70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,
+70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,380,132,349,
+70,70,70,70,70,70,70,70,70,287,287,70,70,70,70,70,70,70,70,70,70,70,70,70,70,256,15,318,
+70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,256,15,318,
+70,70,70,70,70,70,70,70,70,70,70,287,70,70,380,132,349,70,70,70,70,70,70,70,70,225,8,194,
+70,70,70,70,70,70,70,70,70,70,70,70,70,70,256,15,318,70,70,70,70,70,70,70,70,70,70,70,
+70,70,70,70,70,70,70,70,70,70,70,70,70,70,225,8,194,70,70,70,70,70,70,70,70,70,70,70,
+70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,
+70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,
+380,132,132,132,349,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,
+256,15,15,15,318,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,
+256,15,15,15,318,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,
+256,15,15,15,318,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,
+225,8,8,8,194,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70
+</data>
+ </layer>
+ <layer id="2" name="road" width="28" height="18">
+  <properties>
+   <property name="checkpoint" value="1"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,392,361,269,269,269,269,269,269,269,269,269,269,176,0,0,0,0,0,0,0,0,0,
+0,0,0,0,392,361,298,267,81,388,81,81,81,81,81,81,81,453,144,0,0,0,0,0,0,0,0,0,
+0,0,392,361,298,267,204,173,0,0,0,0,0,0,0,0,0,206,144,0,0,0,0,0,0,0,0,0,
+0,0,206,20,204,173,0,0,0,0,0,0,0,0,0,0,0,206,390,269,269,269,269,269,176,0,0,0,
+0,0,206,144,0,0,0,0,0,0,0,0,0,0,0,0,0,113,81,81,81,81,81,453,144,0,0,0,
+0,0,206,144,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,206,144,0,0,0,
+0,0,206,144,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,207,269,269,359,144,0,0,0,
+0,0,206,390,269,269,269,269,0,0,0,0,0,0,0,0,0,0,0,0,206,20,81,81,82,0,0,0,
+0,0,113,81,81,81,453,144,0,0,0,0,0,0,0,0,0,0,0,0,206,144,0,0,0,0,0,0,
+0,0,0,0,0,0,206,144,0,0,0,0,0,0,0,0,0,0,0,0,206,144,0,0,0,0,0,0,
+0,0,0,0,0,0,206,144,0,0,0,0,0,0,0,0,0,0,0,0,206,390,269,269,83,52,0,0,
+0,0,0,0,0,0,206,144,0,0,0,0,0,0,0,0,0,0,0,0,81,81,81,81,453,422,0,0,
+0,0,0,0,0,0,110,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,206,144,0,0,
+0,0,0,0,0,0,206,390,269,269,269,269,269,269,269,330,299,0,0,0,0,0,0,0,206,144,0,0,
+0,0,0,0,0,0,113,81,81,81,81,81,81,81,236,175,205,269,420,269,269,269,269,269,359,144,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,142,111,81,81,81,81,81,81,81,81,81,82,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="ground" width="28" height="18">
+  <properties>
+   <property name="checkpoint" value="1"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,411,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,411,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,411,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,411,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,411,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,386,105,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="sand" width="28" height="18">
+  <properties>
+   <property name="checkpoint" value="1"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,63,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="5" name="oils">
+  <object id="420" name="oil" gid="480" x="1369.97" y="559.364" width="54" height="47">
+   <properties>
+    <property name="h" value="47"/>
+    <property name="type" value="oil"/>
+    <property name="w" value="54"/>
+   </properties>
+  </object>
+  <object id="421" name="oil" gid="480" x="497.242" y="131.045" width="54" height="47">
+   <properties>
+    <property name="h" value="47"/>
+    <property name="type" value="oil"/>
+    <property name="w" value="54"/>
+   </properties>
+  </object>
+  <object id="422" name="oil" gid="480" x="900.273" y="1021.95" width="54" height="47">
+   <properties>
+    <property name="h" value="47"/>
+    <property name="type" value="oil"/>
+    <property name="w" value="54"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="collisions">
+  <object id="338" name="tree_large" gid="492" x="1228.82" y="243.909" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="339" name="tree_small" gid="493" x="413.485" y="74.3939" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="341" name="tribune_full" gid="495" x="1351.64" y="236.818" width="224" height="111">
+   <properties>
+    <property name="h" value="111"/>
+    <property name="type" value="tribune_full"/>
+    <property name="w" value="224"/>
+   </properties>
+  </object>
+  <object id="343" name="tree_small" gid="493" x="1546.82" y="252.879" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="344" name="tree_small" gid="493" x="1204.39" y="89.2424" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="345" name="tree_small" gid="493" x="1165" y="68.0303" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="346" name="tree_large" gid="492" x="755.591" y="56.0909" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="347" name="tree_small" gid="493" x="289.242" y="143.788" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="348" name="tree_large" gid="492" x="128.318" y="207.606" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="349" name="tree_small" gid="493" x="52.8788" y="283.182" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="350" name="tree_large" gid="492" x="16.197" y="356.091" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="351" name="tree_small" gid="493" x="49.8485" y="552.879" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="352" name="tree_large" gid="492" x="107.106" y="750.03" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="353" name="tree_small" gid="493" x="258.939" y="719.545" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="354" name="tree_large" gid="492" x="270.742" y="795.485" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="355" name="tree_small" gid="493" x="240.758" y="995.303" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="356" name="tree_large" gid="492" x="13.1667" y="1086.39" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="357" name="tree_small" gid="493" x="89.2424" y="1113.48" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="358" name="tree_large" gid="492" x="519.227" y="883.364" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="359" gid="492" x="567.712" y="834.879" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="360" name="tree_small" gid="493" x="613.485" y="883.182" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="361" name="tree_large" gid="492" x="901.045" y="882.364" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="362" name="tree_large" gid="492" x="1034.38" y="910.636" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="363" name="tree_small" gid="493" x="1104.39" y="786.212" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="364" name="tree_small" gid="493" x="1198.33" y="758.939" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="365" name="tree_large" gid="492" x="1152.56" y="710.636" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="366" name="tree_large" gid="492" x="1164.68" y="583.364" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="367" name="tree_small" gid="493" x="1246.82" y="455.909" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="368" name="tree_small" gid="493" x="1392.27" y="448.818" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="369" name="tree_small" gid="493" x="1613.48" y="522.576" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="370" name="tree_large" gid="492" x="1673.77" y="431.848" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="371" name="tree_large" gid="492" x="619.227" y="1162.15" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="372" name="tree_large" gid="492" x="901.045" y="1180.33" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="373" name="tree_large" gid="492" x="979.833" y="1207.61" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="374" name="tree_small" gid="493" x="1437.73" y="1165" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="375" name="tree_small" gid="493" x="1277.12" y="910.455" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="376" name="tree_small" gid="493" x="1455.91" y="928.636" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="377" name="tree_large" gid="492" x="1367.71" y="950.03" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="378" name="tree_small" gid="493" x="1674.09" y="795.303" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="379" name="tree_large" gid="492" x="1425.29" y="689.424" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="380" name="tree_small" gid="493" x="1507.42" y="692.273" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="381" name="tree_large" gid="492" x="970.742" y="398.515" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="382" name="tree_small" gid="493" x="1046.82" y="446.818" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="383" name="tree_large" gid="492" x="831.348" y="310.636" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="384" name="tree_small" gid="493" x="652.879" y="316.515" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="385" name="tree_small" gid="493" x="680.152" y="401.364" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="386" name="tree_large" gid="492" x="649.53" y="547" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="387" name="tree_small" gid="493" x="628.636" y="628.636" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="388" name="tree_large" gid="492" x="516.197" y="683.364" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="389" name="tree_small" gid="493" x="534.697" y="716.515" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="390" name="tree_small" gid="493" x="492.273" y="277.121" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="391" name="tree_large" gid="492" x="431.348" y="362.152" width="107" height="106">
+   <properties>
+    <property name="h" value="106"/>
+    <property name="type" value="tree_large"/>
+    <property name="w" value="107"/>
+   </properties>
+  </object>
+  <object id="392" name="tribune_full" gid="495" x="303.152" y="499.045" width="224" height="111">
+   <properties>
+    <property name="h" value="111"/>
+    <property name="type" value="tribune_full"/>
+    <property name="w" value="224"/>
+   </properties>
+  </object>
+  <object id="393" name="tree_small" gid="493" x="277.121" y="383.182" width="70" height="70">
+   <properties>
+    <property name="h" value="70"/>
+    <property name="type" value="tree_small"/>
+    <property name="w" value="70"/>
+   </properties>
+  </object>
+  <object id="394" name="tent_blue" gid="484" x="171.03" y="116.848" width="64" height="64">
+   <properties>
+    <property name="h" value="64"/>
+    <property name="type" value="tent_blue"/>
+    <property name="w" value="64"/>
+   </properties>
+  </object>
+  <object id="395" name="tent_blue" gid="484" x="1234.67" y="943.758" width="64" height="64">
+   <properties>
+    <property name="h" value="64"/>
+    <property name="type" value="tent_blue"/>
+    <property name="w" value="64"/>
+   </properties>
+  </object>
+  <object id="396" name="tribune_overhang_striped" gid="497" x="733.303" y="882.364" width="224" height="72">
+   <properties>
+    <property name="h" value="72"/>
+    <property name="type" value="tribune_overhang_striped"/>
+    <property name="w" value="224"/>
+   </properties>
+  </object>
+  <object id="397" name="tribune_overhang_red" gid="496" x="531.455" y="1102.52" width="224" height="72">
+   <properties>
+    <property name="h" value="72"/>
+    <property name="type" value="tribune_overhang_red"/>
+    <property name="w" value="224"/>
+   </properties>
+  </object>
+  <object id="398" gid="474" x="684.364" y="234.182" width="105" height="31">
+   <properties>
+    <property name="h" value="31"/>
+    <property name="type" value="barrier_white_race"/>
+    <property name="w" value="105"/>
+   </properties>
+  </object>
+  <object id="399" gid="474" x="820.227" y="232.985" width="105" height="31">
+   <properties>
+    <property name="h" value="31"/>
+    <property name="type" value="barrier_white_race"/>
+    <property name="w" value="105"/>
+   </properties>
+  </object>
+  <object id="400" gid="473" x="957.091" y="234.212" width="105" height="31">
+   <properties>
+    <property name="h" value="31"/>
+    <property name="type" value="barrier_white"/>
+    <property name="w" value="105"/>
+   </properties>
+  </object>
+  <object id="401" name="barrier_red" gid="471" x="823.758" y="54.3939" width="105" height="31">
+   <properties>
+    <property name="h" value="31"/>
+    <property name="type" value="barrier_red"/>
+    <property name="w" value="105"/>
+   </properties>
+  </object>
+  <object id="402" name="barrel_red" gid="469" x="655.697" y="423.091" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_red"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="404" name="barrel_red" gid="469" x="692.061" y="870.848" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_red"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="405" name="barrel_red" gid="469" x="361.758" y="107.212" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_red"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="406" name="barrel_red" gid="469" x="401.152" y="101.152" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_red"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="407" name="barrel_red" gid="469" x="276.909" y="158.727" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_red"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="409" name="barrel_red" gid="469" x="1567.82" y="607.212" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_red"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="410" name="barrel_red" gid="469" x="1595.09" y="634.485" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_red"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="411" name="barrel_blue" gid="467" x="1670.85" y="1032.18" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_blue"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="412" name="barrel_blue" gid="467" x="325.394" y="952.667" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_blue"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="413" name="barrel_blue" gid="467" x="337.515" y="986" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_blue"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="414" name="barrel_blue" gid="467" x="125.394" y="231.455" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_blue"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="415" name="barrel_blue" gid="467" x="1134.48" y="422.364" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_blue"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="416" name="barrel_blue" gid="467" x="1164.79" y="446.606" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_blue"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="417" name="barrel_blue" gid="467" x="1207.21" y="425.394" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_blue"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="418" name="barrel_blue" gid="467" x="1331.45" y="422.364" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_blue"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="419" name="barrel_blue" gid="467" x="1228.42" y="128.424" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="barrel_blue"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="423" name="cone_down" gid="478" x="1079.91" y="171.606" width="23" height="22">
+   <properties>
+    <property name="h" value="22"/>
+    <property name="type" value="cone_down"/>
+    <property name="w" value="23"/>
+   </properties>
+  </object>
+  <object id="424" name="cone_down" gid="478" x="1473.35" y="1004.15" width="23" height="22">
+   <properties>
+    <property name="h" value="22"/>
+    <property name="type" value="cone_down"/>
+    <property name="w" value="23"/>
+   </properties>
+  </object>
+  <object id="425" name="cone_down" gid="478" x="1288.5" y="1070.82" width="23" height="22">
+   <properties>
+    <property name="h" value="22"/>
+    <property name="type" value="cone_down"/>
+    <property name="w" value="23"/>
+   </properties>
+  </object>
+  <object id="426" name="tires_red_alt" gid="489" x="1367.82" y="814" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="tires_red_alt"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="427" name="tires_red_alt" gid="489" x="1104.18" y="246.606" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="tires_red_alt"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="428" name="tires_red_alt" gid="489" x="143.576" y="516.303" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="tires_red_alt"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="429" name="tires_white_alt" gid="491" x="573.879" y="938.242" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="tires_white_alt"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+  <object id="430" name="tires_white_alt" gid="491" x="1382.97" y="301.152" width="28" height="28">
+   <properties>
+    <property name="h" value="28"/>
+    <property name="type" value="tires_white_alt"/>
+    <property name="w" value="28"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="player">
+  <object id="467" name="player" x="420.657" y="860.094">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="enemy">
+  <object id="468" name="enemy" x="475.117" y="858.216">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="7" name="checkpoints">
+  <object id="457" x="715.722" y="3.35233" width="281.596" height="199.464" visible="0">
+   <properties>
+    <property name="type" value="checkpoint"/>
+    <property name="value" value="2"/>
+   </properties>
+  </object>
+  <object id="459" x="757.627" y="68.7228" width="5.02849"/>
+  <object id="463" name="checkpoint" x="553.567" y="0" width="200" height="200">
+   <properties>
+    <property name="value" value="2"/>
+   </properties>
+  </object>
+  <object id="464" name="checkpoint" x="1039.66" y="888.185" width="200" height="200">
+   <properties>
+    <property name="value" value="4"/>
+   </properties>
+  </object>
+  <object id="465" name="checkpoint" x="1235.2" y="541.173" width="200" height="200">
+   <properties>
+    <property name="value" value="3"/>
+   </properties>
+  </object>
+  <object id="466" name="checkpoint" x="348.912" y="643.597" width="200" height="200">
+   <properties>
+    <property name="value" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="arrows">
+  <object id="327" name="arrow" gid="466" x="409.515" y="814.909" width="82" height="49">
+   <properties>
+    <property name="angle" value="0"/>
+    <property name="h" value="49"/>
+    <property name="type" value="arrow"/>
+    <property name="value" value="1"/>
+    <property name="w" value="82"/>
+   </properties>
+  </object>
+  <object id="332" name="arrow" gid="466" x="1207.48" y="1066.41" width="82" height="49" rotation="-90">
+   <properties>
+    <property name="angle" value="-90"/>
+    <property name="h" value="49"/>
+    <property name="type" value="arrow"/>
+    <property name="value" value="3"/>
+    <property name="w" value="82"/>
+   </properties>
+  </object>
+  <object id="437" name="arrow" gid="466" x="665.121" y="86.1212" width="82" height="49" rotation="90">
+   <properties>
+    <property name="angle" value="90"/>
+    <property name="h" value="49"/>
+    <property name="type" value="arrow"/>
+    <property name="value" value="2"/>
+    <property name="w" value="82"/>
+   </properties>
+  </object>
+  <object id="438" name="arrow" gid="466" x="580.879" y="86" width="82" height="52" rotation="90">
+   <properties>
+    <property name="angle" value="90"/>
+    <property name="h" value="49"/>
+    <property name="type" value="arrow"/>
+    <property name="value" value="2"/>
+    <property name="w" value="82"/>
+   </properties>
+  </object>
+  <object id="439" name="arrow" gid="466" x="623.879" y="86" width="82" height="49" rotation="90">
+   <properties>
+    <property name="angle" value="90"/>
+    <property name="h" value="49"/>
+    <property name="type" value="arrow"/>
+    <property name="value" value="2"/>
+    <property name="w" value="82"/>
+   </properties>
+  </object>
+  <object id="440" name="arrow" gid="466" x="408.772" y="774.47" width="82" height="49">
+   <properties>
+    <property name="angle" value="0"/>
+    <property name="h" value="49"/>
+    <property name="type" value="arrow"/>
+    <property name="value" value="1"/>
+    <property name="w" value="82"/>
+   </properties>
+  </object>
+  <object id="441" name="arrow" gid="466" x="409.228" y="734.53" width="82" height="49">
+   <properties>
+    <property name="angle" value="0"/>
+    <property name="h" value="49"/>
+    <property name="type" value="arrow"/>
+    <property name="value" value="1"/>
+    <property name="w" value="82"/>
+   </properties>
+  </object>
+  <object id="442" name="arrow" gid="466" x="1109" y="1067" width="82" height="49" rotation="-90">
+   <properties>
+    <property name="angle" value="-90"/>
+    <property name="h" value="49"/>
+    <property name="type" value="arrow"/>
+    <property name="value" value="3"/>
+    <property name="w" value="82"/>
+   </properties>
+  </object>
+  <object id="443" name="arrow" gid="466" x="1161" y="1066" width="82" height="52" rotation="-90">
+   <properties>
+    <property name="angle" value="-90"/>
+    <property name="h" value="49"/>
+    <property name="type" value="arrow"/>
+    <property name="value" value="3"/>
+    <property name="w" value="82"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
