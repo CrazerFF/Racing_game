@@ -38,7 +38,7 @@ export default class Player {
         }
         return direction;
     }
-    get turn() { // получить направление.
+    get turn() { // получить направление
         let turn = TURNS.NONE;
 
         if (this.scene.cursors.left.isDown) {
